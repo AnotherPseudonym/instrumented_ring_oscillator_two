@@ -37,4 +37,5 @@ Note that the seed state is a FIFO fed in at the little end - it's always updata
 ## External hardware
 
 A logic analyzer will probably be the most useful tool for this - For FPGA testing, I used a Digilent Digital Discovery (DD) with this projects outputs going to DD channels 0-15, and using DD channels 24-31 to drive the project inputs.
+There are example images of both a "fast" mode with extra edges which were present at startup, and a deliberately stablized output in this folder for reference.
 A multi-channel oscilloscope might also be interesting to use with this, though since the signals go through output buffers the output might not be fully representative of the RO signal.
