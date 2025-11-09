@@ -1,6 +1,10 @@
 .DS_Store
 .idea
 *.vcd
+*.swp
+*.un~
+*.md~
+*.v~
 runs
 tt_submission
 src/user_config.json
