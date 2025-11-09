@@ -8,7 +8,7 @@ You can also include images in this folder and reference them in the markdown. E
 -->
 
 ## How it works
-Preface: This is probably not a component you want if you want a reliable end device. This is intended to allow studying the decay (or persistence) of high-frequency "modes" which are generally very undesirable. 
+Preface: This is probably not a component you want if you want a reliable end device. This is intended to allow studying the evolution of high-frequency "modes" which are generally very undesirable. 
 
 This project uses ring oscillators with muxes on the inputs to allow setting an initial state or "seed". This can be configured using a clock (in3) and data (in2) similar to SPI (positive edge clocks the data in.
 The in0 line is the enable to start the oscillator running, and in1 is a HOLD line that blocks one stage so that the normal long period can be obtained.
@@ -30,12 +30,16 @@ Note that the seed state is a FIFO fed in at the little end - it's always updata
 
 0. Hook up an analyzer / scope to the output & bidirectional channels.16 phases are driven out.
 1. Select the number of stages (in7:in4).
-2. If desired, seed the initial state using in3 (clk), in2 (data). It's a shift register clocked in on the rising edge.
+2. If desired, seed the initial state using in3 (clk), in2 (data). The input is a shift register clocked in on the rising edge.
 3. Drive enable (in0) high and watch the chaos to see if it stabilizes to the longest frequency, or if high frequency modes persist.
-4. The hold (in1) can be briefly drivent to get to the longest frequency. 
+4. The hold (in1) can be briefly driven to get to the longest frequency. 
+
+![An example pattern showing only the fundamental or slowest mode.](BaseMode.PNG "Desirable operation")
+
+![An example pattern showing higher frequency patterns or modes.] (DefaultMode.PNG "Undesirable operation")
 
 ## External hardware
 
 A logic analyzer will probably be the most useful tool for this - For FPGA testing, I used a Digilent Digital Discovery (DD) with this projects outputs going to DD channels 0-15, and using DD channels 24-31 to drive the project inputs.
-There are example images of both a "fast" mode with extra edges which were present at startup, and a deliberately stablized output in this folder for reference.
+
 A multi-channel oscilloscope might also be interesting to use with this, though since the signals go through output buffers the output might not be fully representative of the RO signal.

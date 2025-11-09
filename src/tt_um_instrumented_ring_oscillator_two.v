@@ -23,6 +23,6 @@ module tt_um_instrumented_ring_oscillator_two (
     assign uio_oe  = ~0;
 
 
-    iro iro (.enable (ena & ui_in[0]), .hold (ui_in[1]), .bdat (ui_in[2]), .bclk (ui_in[3]), .n_stages (ui_in[7:4]), .phases ({uio_out[7:0], uo_out[7:0]}));
+    iro iro (.rst_n rst_n, .enable (ena & ui_in[0]), .hold (ui_in[1]), .bdat (ui_in[2]), .bclk (ui_in[3]), .n_stages (ui_in[7:4]), .phases ({uio_out[7:0], uo_out[7:0]}));
 
 endmodule
