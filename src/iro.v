@@ -23,7 +23,7 @@ module iro (
 
     always @(posedge bclk, negedge rst_n) begin
         if (!rst_n) begin
-            seed <= {(N_STAGES)'b0};
+            seed <= {25'b0};
         end else begin
             seed[0] <= { bdat };
             seed[N_STAGES-1:1] <= seed[N_STAGES-2:0];
