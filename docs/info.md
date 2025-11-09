@@ -36,7 +36,7 @@ Note that the seed state is a FIFO fed in at the little end - it's always updata
 
 ![An example pattern showing only the fundamental or slowest mode.](BaseMode.PNG "Desirable operation")
 
-![An example pattern showing higher frequency patterns or modes.] (DefaultMode.PNG "Undesirable operation")
+![An example pattern showing higher frequency patterns or modes.](DefaultMode.PNG "Undesirable operation")
 
 ## External hardware
 

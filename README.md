@@ -2,7 +2,7 @@
 
 # Instrumented Ring Oscillator (2) made on Tiny Tapeout
 
-- [Read the documentation for project](docs/info.md)
+[Read the main documentation for project](docs/info.md)
 
 To learn more about Tiny Tapeout and get started, visit https://tinytapeout.com.
 
